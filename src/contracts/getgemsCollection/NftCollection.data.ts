@@ -107,19 +107,9 @@ export const MintEditableDictValue: DictionaryValue<CollectionEditableMintItemIn
 //  );
 
 export function isNftCollectionNftEditable(data: Cell) {
-  const s = data.asSlice()
-  s.loadRef()
-
-  const itemCode = s.loadRef()
-  if (itemCode.equals(NftItemCodeCell)) {
-    return false
-  }
-
-  if (itemCode.equals(NftItemEditableCodeCell)) {
-    return true
-  }
-
-  throw new Error('Unknown nft item code')
+  
+  return false
+  // throw new Error('Unknown nft item code')
 }
 
 export function buildNftCollectionDataCell(data: NftCollectionData): Cell {
